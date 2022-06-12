@@ -55,3 +55,37 @@ function factorial(x){
     }
     return ans;
 }
+
+function operate (operator,num1, num2){
+    let x = operator;
+    switch(x) {
+        case '+':
+            return add(num1,num2);
+            break;
+        case '-':
+            return subtract(num1, num2);
+            break;
+        case '*':
+            return multiply(num1, num2);
+            break;
+        case '/':
+            return divide(num1, num2);
+            break;
+        case '^':
+            return exponent(num1, num2);
+            break;
+        case '√':
+            return squareroot(num1,num2);
+            break;
+        case '%':
+            return percentage(num1);
+            break;
+        case '±':
+            return changeSign(num1);
+            break;
+        case '!':
+            return factorial(num1);
+            break;
+    }
+
+}
