@@ -7,15 +7,53 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Calculator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <h1> Calculator</h1>
+        <div id = "calculator">
+            <div id = "screen">
+                <div id="bar"></div>
+                <div id = "firstButtons">
+                    <button class = "ac" value="ac"> ac</button>
+                    <button class = "del" value="del"> <-</button>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class = "percent" value="percent"> %</button>
+                <button class = "sqrt" value="sqrt"> √</button>
+                <button class = "factorial" value="factorial"> !</button>
+                <button class = "exponent" value="exponent"> x
+                    <super>y</super>
+                </button>       
+                <button class = "add" value="add"> +</button>
+                <button class = "subtract" value="subtract"> -</button>
+                <button class = "multiply" value="multiply"> x</button>
+                <button class = "divide" value="divide"> /</button>
+                <button class = "num-key" value="7"> 7</button>
+                <button class = "num-key" value="8"> 8</button>
+                <button class = "num-key" value="9"> 9</button>
+                <button class = "changeSign" value="changeSign"> ±</button>
+                <button class = "num-key" value="4"> 4</button>
+                <button class = "num-key" value="5"> 5</button>
+                <button class = "num-key" value="6"> 6</button>
+                <button class = "decimal" value="decimal" style="font-weight: bolder;"> .</button>
+                <button class = "num-key" value="1"> 1</button>
+                <button class = "num-key" value="2"> 2</button>
+                <button class = "num-key" value="3"> 3</button>
+                <button class = "num-key" id="zero" value="0"> 0</button>
+                <button class = "ans" value="ans">ans</button>
+                <button class = "equals" value="="> =</button>
+                
+            </div>
+        </div>
+        <div class="footer">
+            <p> created by <a href="https://github.com/dvelazq1" target="blank">dvelazq1</a></p>
+        </div>
         
         <script src="script.js" ></script>
     </body>
