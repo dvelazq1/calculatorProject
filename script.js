@@ -90,9 +90,7 @@ function operate (){
             ans = factorial(num1);
             break;
     }
-    num1 = ans;
-    num2 = null;
-    ans = parseFloat((ans).toFixed(12))
+    ans = parseFloat((ans).toFixed(12));
     return ans;
 }
 let writeHere = document.getElementById("numberArea");
@@ -152,30 +150,42 @@ function del(){
 }
 
 function handleOperation(x){
-    if (writeHere.innerText === "") {
+    if (writeHere.innerText === "" && copyHere.innerText === "") {
         return;
     }
-    if (num1 === null){
+    if (num1 === null && writeHere.innerText != null){
         num1 = writeHere.innerText;
     }
+    if (x == '√' || x == '%'|| x == '±' || x== '!'){
+        operator = x;
+        writeHere.innerText = operate();
+        num1 = writeHere.innerText;
+        operator = null;
+        return;
+    }
+    else {
+        copyHere.innerText += writeHere.innerText += x;
+        }
+/*     else if (operator != null){
+        copyHere.innerText = "";
+    }
+   
     else if (num1 != null && num2 ===null){
         num2 = writeHere.innerText;
         equals();
         writeHere.innerText = " ";
         count = 0;
         return;
+    } 
+    if (copyHere.innerText != ""){
+        num1 = copyHere.innerText;
+        copyHere.innerText += x;
     }
-    if (x !='√' && x != '%' && x != '±') {
-    copyHere.innerText += writeHere.innerText += x;
-    }
-    if (x == '√' || x == '%'|| x == '±'){
-        operator = x;
-        num1 = writeHere.innerText;
-        writeHere.innerText = operate();
-        copyHere.innerText += writeHere.innerText;
-        return;
-    }
+     
+    
+     */ 
 
+    
     writeHere.innerText = " ";
     operator = x;
     count = 0;
@@ -186,17 +196,15 @@ function equals() {
     if (num1 === null && num2 === null && writeHere.innerText === "") {
         return;
     }
-    else if (myArr.includes('=')){
-        copyHere.innerText == ans;
-    }
-    else if (num1 != null && num2 != null && operator != null) {
-        copyHere.innerText += writeHere.innerText + "=";
-        writeHere.innerText = operate();
-    }
     else if (num2 === null && writeHere.innerText != null && num1 != null){
     num2 = writeHere.innerText;
     copyHere.innerText += writeHere.innerText + "=";
     writeHere.innerText = operate();
+    alert('else if num1 is ' + num1 + ' num2 is ' + num2 + ' ans is '+ ans);
+    }
+    else {
+        writeHere.innerText = operate();
+        alert('num1 is ' + num1 + ' num2 is ' + num2 + ' ans is '+ ans);
     }
 
 }
