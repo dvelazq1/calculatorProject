@@ -17,37 +17,40 @@
         <h1> Calculator</h1>
         <div id = "calculator">
             <div id = "screen">
-                <div id="bar"></div>
+                <div id="bar">
+                    <div id = "prevArea"></div>
+                    <div id = "numberArea"></div>
+                </div>
                 <div id = "firstButtons">
-                    <button class = "ac" value="ac"> ac</button>
-                    <button class = "del" value="del"> <-</button>
+                    <button class = "ac" value="ac" onclick="clearText()"> ac</button>
+                    <button class = "del" value="del" onclick="del()"> <-</button>
                 </div>
             </div>
             <div class="buttons">
-                <button class = "percent" value="percent"> %</button>
-                <button class = "sqrt" value="sqrt"> √</button>
-                <button class = "factorial" value="factorial"> !</button>
-                <button class = "exponent" value="exponent"> x
+                <button class = "percent" value="percent" onclick="handleOperation('%')"> %</button>
+                <button class = "sqrt" value="sqrt" onclick="handleOperation('√')"> √</button>
+                <button class = "factorial" value="factorial" onclick="handleOperation('!')"> !</button>
+                <button class = "exponent" value="exponent" onclick="handleOperation('^')"> x
                     <super>y</super>
                 </button>       
-                <button class = "add" value="add"> +</button>
-                <button class = "subtract" value="subtract"> -</button>
-                <button class = "multiply" value="multiply"> x</button>
-                <button class = "divide" value="divide"> /</button>
-                <button class = "num-key" value="7"> 7</button>
-                <button class = "num-key" value="8"> 8</button>
-                <button class = "num-key" value="9"> 9</button>
-                <button class = "changeSign" value="changeSign"> ±</button>
-                <button class = "num-key" value="4"> 4</button>
-                <button class = "num-key" value="5"> 5</button>
-                <button class = "num-key" value="6"> 6</button>
-                <button class = "decimal" value="decimal" style="font-weight: bolder;"> .</button>
-                <button class = "num-key" value="1"> 1</button>
-                <button class = "num-key" value="2"> 2</button>
-                <button class = "num-key" value="3"> 3</button>
-                <button class = "num-key" id="zero" value="0"> 0</button>
-                <button class = "ans" value="ans">ans</button>
-                <button class = "equals" value="="> =</button>
+                <button class = "add" value="add" onclick="handleOperation('+')"> +</button>
+                <button class = "subtract" value="subtract" onclick="handleOperation('-')"> -</button>
+                <button class = "multiply" value="multiply" onclick="handleOperation('*')"> x</button>
+                <button class = "divide" value="divide" onclick="handleOperation('/')"> /</button>
+                <button class = "num-key" value="7"onclick="addNum(7)"> 7</button>
+                <button class = "num-key" value="8" onclick="addNum(8)"> 8</button>
+                <button class = "num-key" value="9"onclick="addNum(9)"> 9</button>
+                <button class = "changeSign" value="changeSign" onclick="handleOperation('±')"> ±</button>
+                <button class = "num-key" value="4"onclick="addNum(4)"> 4</button>
+                <button class = "num-key" value="5"onclick="addNum(5)"> 5</button>
+                <button class = "num-key" value="6"onclick="addNum(6)"> 6</button>
+                <button class = "decimal" value="decimal" onclick="addDecimal()" style="font-weight: bolder;"> .</button>
+                <button class = "num-key" value="1" onclick="addNum(1)"> 1</button>
+                <button class = "num-key" value="2"onclick="addNum(2)"> 2</button>
+                <button class = "num-key" value="3"onclick="addNum(3)"> 3</button>
+                <button class = "num-key" id="zero" value="0"onclick="addNum(0)"> 0</button>
+                <button class = "ans" value="ans" onclick="getAns()">ans</button>
+                <button class = "equals" value="=" onclick="equals()"> =</button>
                 
             </div>
         </div>
