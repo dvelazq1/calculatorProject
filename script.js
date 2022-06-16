@@ -110,16 +110,16 @@ function addNum(x){
     if (count >= 32){
         alert("max digits entered")
     }
-    else if (writeHere.innerText == ans){
-        writeHere.innerText = '';
-        copyHere.innerText = " ";
-        writeHere.innerText += x;
-    }
     else if (saveThis){
         writeHere.innerText = '';
         writeHere.innerText += x;
         num2 += x;
         saveThis = false;
+    }
+    else if (writeHere.innerText == ans){
+        writeHere.innerText = '';
+        copyHere.innerText = " ";
+        writeHere.innerText += x;
     }
     else {
     writeHere.innerText += x;
@@ -174,10 +174,11 @@ function del(){
 
 function handleOperation(x){
     if (onlyOne.includes(x)){
-        operator = x;
         num1 = writeHere.innerText;
+        let check = num1;
+        operator = x;
         writeHere.innerText = operate();
-        if (!num1){
+        if (!num1 || num1 === check){
             num1 =ans;
         }
         else if (!num2){
