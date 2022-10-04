@@ -1,6 +1,6 @@
 # Calculator Project
 
-Click [Here](dvelazq1.github.io/calculatorProject/) to View the Project
+Click [Here](https://dvelazq1.github.io/calculatorProject/) to View the Project
 
 This is the repository for my calculator project I built using HTML, CSS and Javascript. It can perform a variety of functions such as:
 
