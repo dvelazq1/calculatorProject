@@ -9,4 +9,4 @@ This is the repository for my calculator project I built using HTML, CSS and Jav
 
 Furthermore the calculator also provides other useful functions such as being able to store the previous answer, being able to handle decimals, and is able to change the sign of input (i.e. from negative to positive and vice versa).
 
-![Landing Page Project](/images/projectScreenshot.png)
+![Calculator Project](/images/projectScreenshot.png)
